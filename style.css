@@ -129,16 +129,35 @@ body{
 }
 
 .opening{
-    height:100vh;
+    min-height: 100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:40px;
+    padding: 80px 40px 40px 40px; /* top padding added for mobile visibility */
 }
 
 .opening > div{
     max-width:800px;
+}
+
+/* OPENING PAGE TEXT */
+.opening h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.opening h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.opening p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: 0.95;
 }
 
 /* REVIEW SECTION */
@@ -226,12 +245,45 @@ body{
         height: 35px;
         font-size: 18px;
     }
+
+    .opening {
+        padding: 60px 30px 30px 30px;
+    }
+
+    .opening h1 {
+        font-size: 2.5rem;
+    }
+
+    .opening h2 {
+        font-size: 1.8rem;
+    }
+
+    .opening p {
+        font-size: 1.1rem;
+    }
 }
 
 /* Large Mobile Devices */
 @media (max-width: 768px) {
     .opening {
-        padding: 30px 20px;
+        padding: 50px 20px 20px 20px;
+    }
+
+    .opening > div {
+        max-width: 90%;
+    }
+
+    .opening h1 {
+        font-size: 2rem;
+    }
+
+    .opening h2 {
+        font-size: 1.5rem;
+    }
+
+    .opening p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .review-wrapper {
@@ -264,7 +316,20 @@ body{
 /* Small Mobile Devices */
 @media (max-width: 480px) {
     .opening {
-        padding: 20px 10px;
+        padding: 40px 10px 20px 10px;
+    }
+
+    .opening h1 {
+        font-size: 1.6rem;
+    }
+
+    .opening h2 {
+        font-size: 1.2rem;
+    }
+
+    .opening p {
+        font-size: 0.95rem;
+        line-height: 1.4;
     }
 
     .review-wrapper {
@@ -276,7 +341,7 @@ body{
     }
 
     .review h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .section h2 {
@@ -285,7 +350,7 @@ body{
 
     .section p {
         font-size: 0.9rem;
-        line-height: 1.6;
+        line-height: 1.4;
     }
 
     #musicBtn {
@@ -299,3 +364,4 @@ body{
         padding: 15px;
     }
 }
+
