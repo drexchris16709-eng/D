@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loaderContainer.classList.add("visible");
         
         setTimeout(() => {
-            window.location.href = "Choices/C.html";
+            window.location.href = "Choices/index.html";
         }, 6000);
         
     }, 8000);
