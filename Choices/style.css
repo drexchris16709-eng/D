@@ -1,0 +1,154 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #000000;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .bg {
+      position: fixed; 
+      inset: 0; 
+      z-index: 0; 
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 60% 45% at 20% 15%, rgba(255,255,255,0.10), transparent 60%),
+        radial-gradient(ellipse 55% 40% at 85% 85%, rgba(255,255,255,0.08), transparent 60%),
+        linear-gradient(180deg, #060606 0%, #000000 55%, #030303 100%);
+    }
+
+    .orb {
+      position: absolute; 
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.5;
+      animation: pulse 7s ease-in-out infinite;
+    }
+
+    .orb.a { 
+      width: 420px; 
+      height: 420px; 
+      top: -120px; 
+      left: -100px; 
+      background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 70%); 
+      animation-delay: 0s;
+    }
+
+    .orb.b { 
+      width: 360px; 
+      height: 360px; 
+      bottom: -140px; 
+      right: -80px; 
+      background: radial-gradient(circle, rgba(255,255,255,0.28), transparent 70%); 
+      animation-delay: 2.5s;
+    }
+
+    .orb.c { 
+      width: 260px; 
+      height: 260px; 
+      top: 40%; 
+      right: 10%; 
+      background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%); 
+      animation-delay: 4.5s;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.35; }
+      50% { transform: scale(1.15); opacity: 0.6; }
+    }
+
+    .modal-card {
+      position: relative;
+      z-index: 10;
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    .logo-container {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #000000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .modal-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .modal-subtitle {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 28px;
+    }
+
+    .role-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .role-btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+      padding: 16px 20px;
+      border: 2px solid #000000;
+      border-radius: 12px;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .role-btn:hover {
+      background-color: #000000;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .role-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
