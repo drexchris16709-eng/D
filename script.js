@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     video.addEventListener("error", setFallbackBackground);
 
-    video.muted = false;
+    video.muted = true;
     video.play().catch(error => {
         console.warn("Autoplay blocked by browser. Falling back to background image.");
         setFallbackBackground();
