@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("bgVideo");
     const loaderContainer = document.getElementById("loader-container");
 
-    video.muted = true;
+    video.muted = false;
     video.play().catch(error => {
         console.warn("Autoplay blocked or video playback error:", error);
     });
